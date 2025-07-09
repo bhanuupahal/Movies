@@ -6,8 +6,7 @@ const Header = () => (
       <img
         src="/images/movie-png (1).webp"
         alt="Movies Ka Khazana Logo"
-        className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-4 object-contain"
-        style={{ marginLeft: "-2rem" }}
+        className="h-10 w-10 sm:h-12 sm:w-12 mr-2 sm:mr-4 object-contain ml-0 sm:ml-[-2rem]"
       />
       <h1 className="text-white text-2xl sm:text-5xl font-bold tracking-wide uppercase text-center sm:text-left">
         Latest Movies Ka <span className="text-red-600">Khazana</span>
