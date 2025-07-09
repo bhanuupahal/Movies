@@ -38,8 +38,7 @@ const Home = () => {
         {shuffledImages.map((img, idx) => (
           <div
             key={idx}
-            className="p-2 relative cursor-pointer transition-transform flex flex-col items-center"
-            style={{ width: "14rem" }} // Ensures label stays within image width
+            className="p-2 relative cursor-pointer transition-transform flex flex-col items-center w-40 sm:w-48 md:w-56"
             onClick={() => setSelectedIdx(idx)}
           >
             <div className="relative w-full flex justify-center">
@@ -47,9 +46,8 @@ const Home = () => {
                 src={img.src}
                 alt={`Movie ${idx + 1}`}
                 className={`rounded-lg shadow-lg object-contain bg-gray-800 transition-all duration-200
-                  ${selectedIdx === idx ? "w-56 h-72 z-10 ring-4 ring-yellow-400" : "w-48 h-64"}
+                  ${selectedIdx === idx ? "w-56 h-72 z-10 ring-4 ring-yellow-400" : "w-full h-64"}
                 `}
-                style={{}}
               />
               {img.label && (
                 <span
@@ -68,14 +66,14 @@ const Home = () => {
           </div>
         ))}
       </div>
-      
+
       <div className="flex justify-center mt-8 space-x-2">
         {Array.from({ length: totalPages }, (_, i) => (
           <button
             key={i}
             onClick={() => {
               setPage(i + 1);
-              setSelectedIdx(null); 
+              setSelectedIdx(null);
             }}
             className={`px-4 py-2 rounded ${
               page === i + 1

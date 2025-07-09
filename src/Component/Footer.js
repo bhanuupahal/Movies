@@ -23,7 +23,7 @@ const Footer = () => (
               href="mailto:india@movieskhazana.com"
               className="underline"
             >
-              india@movieskhazana.com https://github.com/bhanuupahal/Movies.git
+              india@movieskhazana.com 
             </a>
           </span>
           <span>
