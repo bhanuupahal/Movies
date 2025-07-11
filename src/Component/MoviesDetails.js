@@ -71,7 +71,7 @@ const MovieDetails = () => {
   <div className="block md:hidden mb-6">
     <button
       onClick={() => setShowModal(true)}
-      className="w-full bg-blue-900 text-black font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition"
+      className="w-full bg-blue-800 text-white font-semibold py-2 px-4 rounded-md hover:bg-blue-700 transition"
     >
       📽️ View Recent Movies
     </button>
