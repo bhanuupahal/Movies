@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const navItems = [
   { label: "Home", path: "/" },
@@ -36,7 +37,7 @@ const Navbar = () => {
 
   const handleNavClick = (path) => {
     navigate(path);
-    setMenuOpen(false); // Close menu on navigation (for mobile)
+    setMenuOpen(false); 
   };
 
   return (
@@ -85,26 +86,38 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          {/* Search Bar Right */}
-          <div className="flex items-center ml-2">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-16 sm:w-24 px-2 py-1 rounded-l-full bg-gray-600 text-gray-100 focus:outline-none text-sm"
-            />
-            <button className="bg-yellow-400 px-2 py-1 rounded-r-full flex items-center justify-center hover:bg-yellow-500 transition h-8">
-              {/* Search Icon SVG */}
-              <svg
-                className="h-4 w-4 text-gray-800"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <circle cx="11" cy="11" r="7" />
-                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-              </svg>
-            </button>
+
+          
+          {/*  Search AND Login */}
+          <div className="flex items-center gap-4 ml-2">
+           
+            <div className="flex items-center">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-16 sm:w-24 px-2 py-1 rounded-l-full bg-gray-600 text-gray-100 focus:outline-none text-sm"
+              />
+              <button className="bg-yellow-400 px-2 py-1 rounded-r-full flex items-center justify-center hover:bg-yellow-500 transition h-8">
+                <svg
+                  className="h-4 w-4 text-gray-800"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Login */}
+            <Link
+              to="/login"
+              className="text-white hover:underline text-sm sm:text-base font-medium"
+            >
+              Login
+            </Link>
           </div>
         </div>
         {/* Mobile Menu */}
